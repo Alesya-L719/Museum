@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Geo:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(243, 230, 114);
+    /* color: rgb(94, 91, 91); */
+    color: rgb(93, 75, 75);
+    font-family: "Barriecito", system-ui;
+
+}
+
+.header {
+    border: 2px solid beige;
+    /* background-color: rgb(255, 201, 119); */
+    background-color: rgb(250, 191, 103);
+    /* color: beige; */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* text-transform: uppercase; */
+
+}
+
+.main {
+    display: grid;
+    grid-template-areas:
+        'cola colb colb colb colc';
+}
+
+.col {
+    padding: 10px;
+    border: 2px solid beige;    
+}
+
+ul {      
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+    padding: 5px;
+}
+
+li a:hover{
+    background-color: rgb(245, 151, 116);
+    color: white;
+}
+
+ul li a {
+    /* color: black; */
+    color: rgb(93, 75, 75);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.main aside:first-child {
+    grid-area: cola;
+    background-color: rgb(222, 215, 112);
+}
+
+.main article {
+    grid-area: colb;
+    background-color: rgb(231, 201, 231);
+}
+
+.main aside:last-child {
+    grid-area: colc;
+    background-color: rgb(247, 237, 142);
+}
+
+.footer {
+    background-color: burlywood;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9em;
+    color: white;
+    border: 2px solid beige;
+}
+
+@media (max-width:640px) {
+    body {
+        background-color: moccasin;
+        /* border: 1px solid white; */
+    }
+
+    .main {
+
+        grid-template-areas:
+            'cola
+             colb
+             colc';
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+}
